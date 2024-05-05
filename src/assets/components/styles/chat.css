@@ -1,0 +1,65 @@
+/* Chatbot.css */
+
+.chatbot-container {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-areas: 
+    'int int'
+    'int int'
+    'int int'
+    'input input'
+      ;
+  }
+  
+  .chat-interface {
+    grid-area: int;
+    flex-grow: 1;
+    overflow-y: auto;
+    background-color: #f0f0f0;
+  }
+  
+  .chat-bubble {
+    margin-bottom: 10px;
+    border-radius: 20px;
+    max-width: 80%;
+  }
+  
+  .user {
+    background-color: #4caf50;
+    color: white;
+    align-self: flex-end;
+  }
+  
+  .bot {
+    background-color: #2196f3;
+    color: white;
+  }
+  
+  .input-bar {
+    grid-area: input;
+    bottom: 0;
+    width: 75%;
+    display: flex;
+    align-items: center;
+    background-color: #dbebea;
+    border-radius: 5px;
+  }
+  
+  .input-bar input {
+    flex-grow: 1;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+  }
+  
+  .input-bar button {
+    padding: 10px;
+    margin-left: 10px;
+    border: none;
+    background-color: #ffffff;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+  

@@ -1,0 +1,32 @@
+.VectorStore{
+    height: 100%;
+    display: grid;
+    grid-template-areas: 
+          'title title '
+      'content content '
+      'but1 but2'
+  ;
+  grid-template-columns: 5fr 5fr;
+  grid-template-rows: 45% 50%;
+  }
+  
+  h1{
+    grid-area: title;
+    background-color: black;
+  }
+  .but1{
+    grid-area: but1;
+    background-color: black;
+  }
+  .but2{
+    grid-area: but2;
+    background-color: black;
+  }
+  .Nav{
+    grid-area: topbar;
+      display: flex;
+      justify-content: center; 
+      align-items: center; 
+  
+  
+  }

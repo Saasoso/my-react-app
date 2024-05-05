@@ -1,0 +1,17 @@
+JAva : 
+
+CHapitre 1 :
+ Hiérarchie des classes.
+Action sur les caracteristiques d'un fnetre
+ Types de composants.
+Ajout de composants dans un cadre
+
+
+
+
+
+ Création d’un cadre.
+ Conteneurs et premiers exemples de composants graphiques.
+ Introduction aux gestionnaires de placement.
+ La fabrique de bordures.
+ La gestion des dimensions.

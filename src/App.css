@@ -1,0 +1,27 @@
+.app{
+  width: 100vm;
+  height: 100vh;
+  display: grid;
+  grid-template-areas: 
+    'topbar  hat '
+    'Storage hat '
+;
+grid-template-columns: 2fr 8fr;
+grid-template-rows: 13% 87%;
+background-color: rgb(66, 57, 75);
+}
+
+.Chat{
+  grid-area: hat;
+}
+.Storage{
+  grid-area: Storage;
+}
+.Nav{
+  grid-area: topbar;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+
+
+}

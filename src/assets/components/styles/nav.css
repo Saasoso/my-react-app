@@ -1,0 +1,29 @@
+/* Nav.css */
+
+.nav {
+  margin: 0 auto;
+  width: 100px;
+}
+
+.select-box {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-family :'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  border: 2px solid #4a90e2;
+  border-radius: 5px;
+  background-color: #f8f8f8;
+  color: #333;
+  cursor: pointer;
+  appearance: none; 
+  
+}
+
+.select-box:hover {
+  background-color: #e0e0e0;
+}
+
+.select-box:focus {
+  outline: none;
+  border-color: #4a90e2;
+  box-shadow: 0 0 5px rgba(74, 144, 226, 0.5);
+}

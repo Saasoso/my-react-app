@@ -1,0 +1,113 @@
+.chatbot-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%; /* Adjust width as needed */
+  height: 100%; /* Adjust width as needed */
+  margin: 0 auto; /* Center the chatbot container horizontally */
+  border: 0px solid #ddd;
+  background-color: rgb(133, 118, 150);
+  border-radius: 5px;
+  padding: 10px; /* Adjust padding as needed */
+}
+
+.chat-interface {
+  flex: 1; 
+  overflow-y: scroll;
+  padding: 10px; 
+}
+
+.chat-bubble {
+  margin-bottom: 10px; 
+  padding: 10px; 
+  border-radius: 5px;
+}
+
+.user {
+  background-color: #585656;
+  color: #333;
+  text-align: left;
+}
+
+.ai {
+  background-color: #481fb9;
+  color: #000;
+  text-align: right;
+}
+
+  .input-bar {
+    grid-area: input;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(80, 74, 87);
+    border-radius: 20px;
+    padding: 5px 0px;
+  }
+
+.input-bar input[type="text"],
+.input-bar button {
+  padding: 10px;
+  border: 0px solid rgb(80, 74, 87);
+  border-radius: 10px;
+  background-color: rgb(80, 74, 87);
+  margin: 5px; 
+}
+::-webkit-input-placeholder{
+  color: #000;
+}
+ 
+.input-bar input[type="text"] {
+  width: 100%;
+}
+
+.input-bar button {
+  padding: 10px;
+  margin-left: 10px;
+  border: none;
+  background-color: rgb(80, 74, 87);
+  color: white;
+  border-radius: 20px;
+  cursor: pointer;
+}
+/* Track */
+::-webkit-scrollbar {
+  width: 1px; /* Width of the scrollbar */
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #880f0f; /* Color of the scrollbar handle */
+  border-radius: 4px; /* Rounded corners for the handle */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Color of the handle when hovered */
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Color of the scrollbar track */
+  border-radius: 4px; /* Rounded corners for the track */
+}
+
+/* Track on hover */
+::-webkit-scrollbar-track:hover {
+  background: #e0e0e0; /* Color of the track when hovered */
+}
+@keyframes typing {
+  from {
+      width: 0;
+  }
+  to {
+      width: 100%;
+  }
+}
+
+.typing-effect::after {
+  content: '';
+  animation: typing 1s steps(40, end);
+  display: inline-block;
+  vertical-align: bottom;
+}
