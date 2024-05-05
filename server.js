@@ -59,7 +59,7 @@ app.post('my-react-app/process', async (req, res) => {
     });
 
     const chatModel = new ChatOpenAI({ 
-    apiKey: "sk-proj-sM4JRxNhHRHMUcvc6p7lT3BlbkFJU6ZHUPGQl2pUXJqPghpC",
+    apiKey: "",
     model: "gpt-3.5-turbo",
      temperature: 0.7 ,
      cache: true , });
