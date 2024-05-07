@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import './styles/nav.css'
 function Nav() {
-  const [selectedOption, setSelectedOption] = useState('basic');
+  const [selectedOption, setSelectedOption] = useState('openai');
 
   const handleChange = (e) => {
     const selectedValue = e.target.value;
@@ -10,8 +10,8 @@ function Nav() {
     sendToServer(selectedValue); 
   };
 
-  const sendToServer = (selectedValue) => {
-    fetch('http://localhost:3000/select', {
+  const sendToServer = () => {
+    fetch('http://localhost:3000/my-react-app/select', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -29,8 +29,8 @@ function Nav() {
   return (
     <div className="nav">
       <select className="select-box" onChange={handleChange}>
-        <option value="openai">Open Ai</option>
-        <option value="basic">Basic</option>
+        <option value="basic">Open Ai</option>
+        <option value="openai">Basic</option>
       </select>
     </div>
   );

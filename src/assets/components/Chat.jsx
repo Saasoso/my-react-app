@@ -28,17 +28,12 @@ const Chat = () => {
         { type: 'user', message: userInput },
       ]);
       setUserInput('');
-
-      if (file) {
-        const fileName = file.name;
-        const filePath = `uploads/${fileName}`;
-  
-        const processResponse = await fetch('http://localhost:3000/process', {
+        const processResponse = await fetch('http://localhost:3000/my-react-app/process', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
           },
-          body: JSON.stringify({ filePath, userInput }),
+          body: JSON.stringify({ userInput }),
         });
 
         if (processResponse.ok) {
@@ -52,7 +47,6 @@ const Chat = () => {
         } else {
           console.error('Error processing file');
         }
-      }
     }
   };
 

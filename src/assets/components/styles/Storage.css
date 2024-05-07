@@ -10,23 +10,23 @@
   grid-template-rows: 45% 50%;
   }
   
-  h1{
-    grid-area: title;
-    background-color: black;
+  .btn {
+    margin: 30px;
+    background-color: #3b7698; /* Button background color */
+    color: #ffffff; /* Button text color */
+    padding: 10px 20px; /* Button padding */
+    font-size: 16px; /* Button font size */
+    cursor: pointer; /* Cursor style */
+    border: none; /* Remove button border */
+    border-radius: 5px; /* Button border radius */
+    &:hover {
+      background-color: #275497;
+    }
   }
-  .but1{
-    grid-area: but1;
-    background-color: black;
-  }
-  .but2{
-    grid-area: but2;
-    background-color: black;
-  }
-  .Nav{
-    grid-area: topbar;
-      display: flex;
-      justify-content: center; 
-      align-items: center; 
-  
-  
+  /* CSS to style the image inside the button */
+  .btn img {
+    vertical-align: middle; /* Align image vertically in the button */
+    margin-right: 5px; /* Add some space between image and text */
+    width: 20px; /* Adjust image width as needed */
+    height: 20px; /* Adjust image height as needed */
   }

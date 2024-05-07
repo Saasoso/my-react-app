@@ -27,3 +27,71 @@ app.post('/upload', upload.single('file'), async (req, res) => {
 app.listen(3000, () => {
     console.log('Server is running on port 5173');
   });
+
+  // Templates
+const Template1 = `**Enchanté !** Je suis PFEChat, votre assistant IA convivial. Explorons ensemble des concepts en nous appuyant sur des documents.
+**Voici quelques informations contextuelles pour vous aider à comprendre:** <context> {context} </context> 
+Current conversation: {chat_history}
+**Maintenant, passons à la question !** **Question:** {input} 
+**Hmm, voyons voir...**
+**(Si le contexte fournit les connaissances pour répondre à la question):**
+**Expliquation:** La question parle sur [**explique la question dans ce context , comme un prof**].
+**Comprendre:** [**éléments spécifiques ou domaines de connaissances cruciaux pour répondre à la question**] sera utile pour la résoudre. 
+**N'hésitez pas à me poser des questions sur ce sujet ou à reformuler votre question si nécessaire ! **
+**(Si le contexte ne fournit pas suffisamment de connaissances):**
+[** Hmm, il semble que les informations contextuelles ne permettent pas de répondre directement à votre question. Mais ne vous inquiétez pas !
+Peut-être pourriez-vous reformuler votre question ou fournir plus de détails, et je pourrais alors vous aider.**]`;
+const Template2 = `**Enchanté !** Je suis PFEChat, votre assistant IA convivial. Explorons ensemble des concepts en nous appuyant sur des documents.
+**Voici quelques informations contextuelles pour vous aider à comprendre:** <context> {context} </context> 
+Current conversation: {chat_history}
+**Maintenant, passons à la question !** **Question:** {input} 
+**Comprendre:** [**éléments spécifiques ou domaines de connaissances cruciaux pour répondre à la question**] sera utile pour la résoudre.  
+**Expliquation:** La question parle sur [**explique la question dans ce context , comme un prof**].
+**N'hésitez pas à me poser des questions sur ce sujet ou à reformuler votre question si nécessaire ! **`;
+
+let prompt ; 
+/*
+app.post('/my-react-app/process', async (req, res) => {
+
+  const {userInput} = req.body;
+  const basic = 'basic';
+  const openai = 'openai';
+  try {
+    const memory = new ConversationSummaryMemory({
+      memoryKey: "chat_history",
+      llm: new ChatOpenAI({ model: "gpt-3.5-turbo", temperature: 0 }),
+    });
+
+    const chatModel = new ChatOpenAI({ 
+    apiKey: "",
+    model: "gpt-3.5-turbo",
+     temperature: 0.7 ,
+     cache: true , });
+    const splitter = RecursiveCharacterTextSplitter.fromLanguage("markdown", {
+      chunkSize: 1000,
+      chunkOverlap: 0,
+    });
+    let prompt ; 
+    const loader = filePath.endsWith(".pdf") ? new PDFLoader(filePath, "text") : new TextLoader(filePath);
+    const splitDocs = await loader.loadAndSplit(splitter);
+
+    const context = [new Document({ pageContent: splitDocs.map(doc => doc.pageContent).join(' ') })];
+
+    if(selectedOption == basic){
+       prompt = ChatPromptTemplate.fromTemplate();
+    }else if(selectedOption == openai){
+       prompt = ChatPromptTemplate.fromTemplate();
+      }
+    const documentChain = await createStuffDocumentsChain({ llm: chatModel, prompt, memory });
+    const output = await documentChain.invoke({ input: userInput, context });
+    console.log(userInput);
+    console.log({ output, memory: await memory.loadMemoryVariables({}) });
+
+    //Sending output
+    res.status(200).json({ output });
+  } catch (error) {
+    console.error('Error processing file:', error);
+    res.status(500).send('Error processing file');
+  }
+});
+*/
